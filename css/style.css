@@ -342,6 +342,29 @@ h5{
 /* --------------------------------------------------
   visionフォーム　
 -------------------------------------------------- */
+.vision-home{
+  text-align: center;
+}
+
+.h6{
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: black;
+  font-family: "Tsukushi B Round Gothic", "筑紫B丸ゴシック";
+}
+
+h6::before {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  width: 60%;
+  height: 10px;
+  transform: skew(-45deg);
+  background-image: repeating-linear-gradient(90deg, transparent 0 4px, #b3ddb5 4px 8px);
+  content: '';
+  z-index: -1;
+}
 
 
 timeline {
