@@ -115,8 +115,6 @@ address {
 }
 
 
-}
-
 /* フッター全体 */
 .footer { 
   padding: 40px 0 30px;
@@ -334,8 +332,28 @@ h5{
 /* --------------------------------------------------
   visionフォーム　
 -------------------------------------------------- */
-.vision-home{
-  text-align: center;
+
+/* vison要素の見出し（h4） */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+.heading-topic {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 35px;
+  left: 20px;
+  color: black;
+  font-family:  'Sacramento', cursive;
+}
+
+h4:before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) skew(-25deg);
+  height: 20px;
+  width: 10px;
+  border-right: 3px solid #333;
+  background-color: white;
+  content: "";
 }
 
 .h6{
@@ -358,8 +376,7 @@ h6::before {
   z-index: -1;
 }
 
-
-timeline {
+.timeline {
   list-style: none;
 }
 .timeline > li {
