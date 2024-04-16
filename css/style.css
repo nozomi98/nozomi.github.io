@@ -196,18 +196,18 @@ address {
 
 /* メインイメージ */
 /* 横並び要素（幅768px未満では縦並びで配置される） */
-.col {
-  max-width: 40%;
+.box {
+  max-width: 20%;
   margin: 0 auto 50px;
 }
-.col-image {
+.box-image {
   margin-bottom: 10px;
 }
-.col p {
+.box p {
   margin-bottom: 0;
 }
 
-.col li{
+.box li{
   display: block;
 }
 
