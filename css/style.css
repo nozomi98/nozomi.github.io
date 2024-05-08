@@ -1,0 +1,576 @@
+@charset "utf-8";
+
+/* 初期スタイル調整 */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body全体の初期スタイル調整 */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: #111;
+  background-color: #f5f5f5;
+}
+
+
+a {
+  color: #032559;
+  text-decoration: none;
+}
+a:hover {
+  color: #032559;
+  text-decoration: underline;
+}
+p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+ul {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+figure {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+/* ---------- 初期スタイル調整 ここまで ---------- */
+
+
+/* --------------------------------------------------
+  共通部分のスタイル指定
+-------------------------------------------------- */
+
+/* ヘッダー */
+
+/* ナビゲーション用チェックボックス */
+/* --------------------
+  チェックボックスでメニュー項目の表示／非表示を切り替える。
+  ブラウザ上にはチェックボックスを表示したくないため、
+  「display: none;」で非表示にしている。
+  -------------------- */
+.nav-toggle {
+  display: none;
+}
+
+/* ハンバーガーボタン */
+.btn-burger {
+  position: absolute; /* 親要素（.header）を基準に絶対配置 */
+  top: 5px;
+  right: 10px;
+  z-index: 2; /* ボックスの重なりの優先順位を指定。数値が大きいほど、手前（上）に配置される */
+  display: block; /* ブロックレベル性質になるため、幅・高さを指定できる */
+  width: 44px;
+  height: 44px;
+  background: url("../img/burger.svg") center center / 35px 20px no-repeat; /* ハンバーガーボタンの画像を指定 */
+  cursor: pointer; /* カーソルの形状を指定 */
+}
+
+/* メニューが開いたときの、ハンバーガーボタンの画像を指定 */
+.nav-toggle:checked ~ .btn-burger {
+  background-color: #999;
+}
+
+/* ナビゲーション */
+
+.nav-list {
+  display: none; /* 最初はメニュー（ul要素）を非表示にしておく指定 */
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.nav-list li {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+.nav-list a {
+  display: block;  /* ブロックレベルで扱い、縦並びに表示している */
+  color: #fff;
+}
+
+/* メニューが開いたとき、<ul>を表示する */
+.nav-toggle:checked ~ .nav .nav-list {
+  display: block;
+}
+
+/* ----------ナビゲーションのスタイル指定 ここまで---------- */
+
+/* セクション */
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+
+
+/* フッター全体 */
+.footer { 
+  padding: 40px 0 30px;
+  color: #fff;
+  background-color: #2B4C5A;
+  text-align: center;
+
+}
+
+/* フッターロゴ */
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+/* 連絡先 */
+.footer-address {
+  margin: 10px 0;
+}
+
+/* SNSのリンクボタン */
+.footer-sns {
+  margin: 20px 0;
+  text-align: center; /* 中身を左右中央揃えで配置 */
+}
+.footer-sns a {
+/* インラインの性質を保ちながら、ブロックレベルの性質を加えている。横並びに配置しながら、外余白を指定 */
+  display: inline-block;
+  margin: 0 5px;
+}
+.footer-sns img {
+  vertical-align: middle; /* 垂直方向中央揃えで配置*/
+}
+
+/* コピーライト */
+.copyright {
+  margin: 0;
+}
+.copyright small {
+  font-size: 11px;
+}
+
+/* --------------------------------------------------
+  ヘッダー画像
+-------------------------------------------------- */
+.top{
+  position: relative;
+}
+
+.header-top{
+  width: 100%;
+  background-size:cover;
+  background-position:center;
+} 
+
+.header-text{
+  color: #ffffff; /* 文字色 */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%; /* 文字の大きさ */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+/* --------------------------------------------------
+  トップページ
+-------------------------------------------------- */
+
+/* メインイメージ */
+/* 横並び要素（幅768px未満では縦並びで配置される） */
+.box {
+  max-width: 20%;
+  margin: 0 auto 50px;
+}
+.box-image {
+  margin-bottom: 10px;
+}
+.box p {
+  margin-bottom: 0;
+}
+
+.box li{
+  display: block;
+}
+
+/* --------------------------------------------------
+  自己紹介
+-------------------------------------------------- */
+
+/* 自己紹介 */
+h4{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  display: inline-block;
+  border-bottom:3px solid #666;
+}
+
+.main-visual img {
+  width: 100%;
+  min-width: 280px;
+  height: auto;
+}
+
+.profilr-text{
+  width: 100%;
+}
+
+h5{
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.top{
+  font-size: 15px;
+}
+
+#profile{
+  padding: 0 40px;
+  margin-bottom: 80px;
+}
+
+/* --------------------------------------------------
+  career
+-------------------------------------------------- */
+
+.part-time{
+  display: flex;
+}
+
+.cafe img{
+  width: 200px;
+  height: auto;
+}
+
+.sutabatext{
+  padding: 0 0 0 15px;
+}
+
+/* --------------------------------------------------
+  hobby
+-------------------------------------------------- */
+.nail{
+  padding: 30px;
+}
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:60%;
+   margin:0 auto;
+}
+
+.slider img {
+   width:100%;/*スライダー内の画像を横幅100%に*/
+   height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+   margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+   position: absolute;/*絶対配置にする*/
+   top: 42%;
+   cursor: pointer;/*マウスカーソルを指マークに*/
+   outline: none;/*クリックをしたら出てくる枠線を消す*/
+   border-top: 2px solid #666;/*矢印の色*/
+   border-right: 2px solid #666;/*矢印の色*/
+   height: 15px;
+   width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+   left: -1.5%;
+   transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+   right: -1.5%;
+   transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+   text-align:center;
+ margin:20px 0 0 0;
+}
+
+.slick-dots li {
+   display:inline-block;
+ margin:0 5px;
+}
+
+.slick-dots button {
+   color: transparent;
+   outline: none;
+   width:8px;/*ドットボタンのサイズ*/
+   height:8px;/*ドットボタンのサイズ*/
+   display:block;
+   border-radius:50%;
+   background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+   background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* --------------------------------------------------
+  visionフォーム　
+-------------------------------------------------- */
+
+/* vison要素の見出し（h4） */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+.heading-topic {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 35px;
+  left: 20px;
+  color: black;
+  font-family:  'Sacramento', cursive;
+}
+
+.h6{
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: black;
+  font-family: "Tsukushi B Round Gothic", "筑紫B丸ゴシック";
+}
+
+h6::before {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  width: 60%;
+  height: 10px;
+  transform: skew(-45deg);
+  background-image: repeating-linear-gradient(90deg, transparent 0 4px, #b3ddb5 4px 8px);
+  content: '';
+  z-index: -1;
+}
+
+.timeline {
+  list-style: none;
+}
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+/* for Desktop */
+@media ( min-width : 640px ){
+  .timeline > li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+  }
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+  }
+  .timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #AFB4DB;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+  }
+}
+
+
+/* --------------------------------------------------
+  幅768px未満のスタイル指定 ここまで
+-------------------------------------------------- */
+
+
+
+/* --------------------------------------------------
+  幅768px以上のスタイル指定 ここから
+-------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* ヘッダー */
+
+  /* ロゴ */
+  .logo {
+    width: auto;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* ハンバーガーボタン */
+  .btn-burger {
+    display: none; /* 768px以上では使用しない */
+  }
+
+  /* ナビゲーション */
+  .nav {
+    padding: 30px 0;
+    background-color: #007C8A	;
+  }
+
+  .nav-list {
+    /* flexbox（横並びにする要素の親に指定） */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* フレックスアイテムを主軸方向（横方向）中央揃えで配置 */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: right;
+    /* フレックスアイテムを交差軸方向（縦方向）中央揃えで配置 */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-list li {
+    /* フレックスアイテムに対する指定 */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0 20px;
+    line-height: 1;
+    border-right: 1px solid #fff; /* 縦棒を表示 */
+  }
+
+  .nav-list li:first-child {
+    border-left: 1px solid #fff; /* 縦棒を表示 */
+  }
+  /* 幅768px未満でメニューを開いた状態から、ウィンドウ幅を768px以上に広げたとき、メニューにflexboxを適用して<li>を横並び表示に切り替える */
+  .nav-toggle:checked ~ .nav .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  /* セクション */
+  .section {
+    margin-bottom: 100px;
+  }
+
+  /* 見出し（h2） */
+  .heading-section {
+    margin-bottom: 50px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 50px 0 20px;
+  }
+  .footer-sns {
+    margin: 30px 0;
+  }
+
+  /* --------------------------------------------------
+  トップページ
+  -------------------------------------------------- */
+
+  /* メインイメージ */
+
+
+  /* 横並び */
+  .row {
+    /* flexbox（横並びにする要素の親に指定） */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  /* 横並び要素 */
+  .col {
+    /* フレックスアイテムに対する指定 */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 32%;
+    flex: 0 1 32%;
+    margin: 0;
+  }
+
+/* --------------------------------------------------
+  自己紹介
+-------------------------------------------------- */
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+    .main-visual {
+      width: 50%;
+      display: block;
+      margin: 0 30px;
+    }
+    
+    .profile-text {
+      width: 50%;
+    }
+  /* --------------------------------------------------
+
+  -------------------------------------------------- */
+
+  /* フォームの3つのブロックに対する指定 */
+  .form-group {
+    /* flexbox（横並びにする要素の親に指定） */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 800px; /* 横幅の最大値 */
+    margin-bottom: 10px;
+  }
+
+  /* 項目名に対する指定 */
+  .form-label {
+    /* フレックスアイテムに対する指定 */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 12em;
+    flex: 0 0 12em;
+    max-width: 12em;
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  /* 入力欄を囲む<div>に対する指定 */
+  .form-col {
+    /* フレックスアイテムに対する指定 */
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+}
+
+  /* --------------------------------------------------
+  幅768px以上のスタイル指定 ここまで
+  -------------------------------------------------- */
