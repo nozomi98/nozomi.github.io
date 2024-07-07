@@ -214,10 +214,8 @@ address {
   width: 170px;
 }
 /* --------------------------------------------------
-  自己紹介
+  profile
 -------------------------------------------------- */
-
-/* 自己紹介 */
 h4{
   font-size: 2rem;
   margin-bottom: 30px;
@@ -257,13 +255,15 @@ h5{
 -------------------------------------------------- */
 .career{
   position: relative;
-  overflow: scroll;
 }
 
-@media (max-width : 768px ) {
+@media (max-width : 550px ) {
  .imgpc{
   display:none;
  }  
+ .career{
+  overflow: scroll;
+ }
 }
 
 .career-text{
@@ -399,7 +399,7 @@ h6::before {
 }
 
 /* for Desktop */
-@media ( min-width : 768px ){
+@media ( min-width : 550px ){
   .timeline > li {
     overflow: hidden;
     margin: 0;
@@ -439,7 +439,7 @@ h6::before {
   幅768px以上のスタイル指定 ここから
 -------------------------------------------------- */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 550px) {
   /* ヘッダー */
 
   /* ロゴ */
@@ -570,12 +570,11 @@ h6::before {
   /* --------------------------------------------------
   career
   -------------------------------------------------- */
-@media (min-width : 768px ) {
+  .career{
+    position: relative;
+  }
+
   .imgmob{
    display:none;
-  }  
- }
-
-  /* --------------------------------------------------
-  幅768px以上のスタイル指定 ここまで
-  -------------------------------------------------- */
+  }
+}
