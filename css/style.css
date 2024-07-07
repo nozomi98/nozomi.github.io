@@ -260,6 +260,12 @@ h5{
   overflow: scroll;
 }
 
+@media (max-width : 768px ) {
+ .imgpc{
+  display:none;
+ }  
+}
+
 .career-text{
   position: absolute;
   top:0;
@@ -268,16 +274,6 @@ h5{
   color: black;
   padding:0;
   margin:0;
-}
-
-.career img{
-  display: block;
-}
-
-
-.career-text{
-  width: 400px;
-  height: 790px;
 }
 
 /* --------------------------------------------------
@@ -570,39 +566,15 @@ h6::before {
     .profile-text {
       width: 50%;
     }
+
   /* --------------------------------------------------
-
+  career
   -------------------------------------------------- */
-
-  /* フォームの3つのブロックに対する指定 */
-  .form-group {
-    /* flexbox（横並びにする要素の親に指定） */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 800px; /* 横幅の最大値 */
-    margin-bottom: 10px;
-  }
-
-  /* 項目名に対する指定 */
-  .form-label {
-    /* フレックスアイテムに対する指定 */
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 12em;
-    flex: 0 0 12em;
-    max-width: 12em;
-    margin: 0;
-    padding-top: 5px;
-  }
-
-  /* 入力欄を囲む<div>に対する指定 */
-  .form-col {
-    /* フレックスアイテムに対する指定 */
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 100%;
-    flex: 0 1 100%;
-  }
-}
+@media (min-width : 768px ) {
+  .imgmob{
+   display:none;
+  }  
+ }
 
   /* --------------------------------------------------
   幅768px以上のスタイル指定 ここまで
